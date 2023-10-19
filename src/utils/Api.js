@@ -8,7 +8,7 @@ const getResponseData = (res) => {
 
 };
 
-export const register = (name, email, password) => {
+export const register = (firstName, lastName, email, username, password) => {
   return fetch(`${BASE_URL}/users`, {
     method: "POST",
     credentials: "include",
@@ -16,20 +16,19 @@ export const register = (name, email, password) => {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ name, email, password }),
+    body: JSON.stringify({ firstName, lastName, email, username, password }),
   }).then((res) => {
     return getResponseData(res);
   });
 };
 
-export const getUserData = (userId, token) => {
+export const getUserData = (userId) => {
   return fetch(`${BASE_URL}/users/${userId}`, {
     method: "GET",
     credentials: "include",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
     },
   })
     .then((res) => {
