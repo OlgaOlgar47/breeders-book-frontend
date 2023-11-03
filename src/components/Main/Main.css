@@ -1,0 +1,21 @@
+.navigation__link {
+  color: #6f6161;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  width: max-content;
+}
+
+.navigation__link-text {
+  padding: 0;
+  align-self: center;
+  margin: 0 0 20px;
+}
+
+.navigation__image {
+  border-radius: 25px;
+  width: 150px;
+  height: 100px;
+}
